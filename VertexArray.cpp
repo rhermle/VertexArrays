@@ -56,8 +56,14 @@ int main()
 	int pixelHeight = VideoMode::getDesktopMode().height / 2;
 	VideoMode vm(pixelWidth, pixelHeight);
 	// Create and open a window for the game
-	RenderWindow window(vm, "Mandelbrot", Style::Default);
-
+	RenderWindow window(vm, "Rainbow Screen", Style::Default);
+	
+	//resize window for different resolutions
+	View view;
+	view.setSize(VideoMode::getDesktopMode().width, VideoMode::getDesktopMode().height);
+	view.setCenter(VideoMode::getDesktopMode().width / 2, VideoMode::getDesktopMode().height / 2);
+	window.setView(view);
+	
 	RainbowScreen rain(pixelWidth, pixelHeight);
 
 	bool update = true;
