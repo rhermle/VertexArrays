@@ -52,15 +52,15 @@ void RainbowScreen::draw(RenderTarget& target, RenderStates states) const
 int main()
 {
 	// Create a video mode object
-	int pixelWidth = VideoMode::getDesktopMode().width / 2;
-	int pixelHeight = VideoMode::getDesktopMode().height / 2;
+	int pixelWidth = VideoMode::getDesktopMode().width;
+	int pixelHeight = VideoMode::getDesktopMode().height;
 	VideoMode vm(pixelWidth, pixelHeight);
 	// Create and open a window for the game
 	RenderWindow window(vm, "Rainbow Screen", Style::Default);
 	
 	//resize window for different resolutions
 	View view;
-	view.setSize(VideoMode::getDesktopMode().width, VideoMode::getDesktopMode().height);
+	view.setSize(pixelWidth, pixelHeight);
 	view.setCenter(VideoMode::getDesktopMode().width / 2, VideoMode::getDesktopMode().height / 2);
 	window.setView(view);
 	
