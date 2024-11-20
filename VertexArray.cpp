@@ -59,10 +59,10 @@ int main()
 	RenderWindow window(vm, "Rainbow Screen", Style::Default);
 	
 	//resize window for different resolutions
-	View view;
+	/*View view;
 	view.setSize(pixelWidth, pixelHeight);
 	view.setCenter(VideoMode::getDesktopMode().width / 2, VideoMode::getDesktopMode().height / 2);
-	window.setView(view);
+	window.setView(view);*/
 	
 	RainbowScreen rain(pixelWidth, pixelHeight);
 
